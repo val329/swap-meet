@@ -26,5 +26,5 @@ general team-work skills and practice git
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-Tatsiana Khurs _______________
+Tatsiana Khurs Valerie Chon 
 Date: _____09/21/2026____
