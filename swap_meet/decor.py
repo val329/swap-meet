@@ -1,6 +1,7 @@
 import uuid
+from .item import Item
 
-class Decor: 
+class Decor(Item): 
     def __init__(self, id=None, width=0, length=0, condition=0):
         self.id = id if id is not None else uuid.uuid4().int
         self.width = width

@@ -1,7 +1,8 @@
 import uuid
+from .item import Item
 CONDITIONS = ["very not mint condition", "visibly used", "slightly used", "mint", "as new"]
 
-class Electronics: 
+class Electronics(Item): 
     def __init__(self, id=None, type="Unknown", condition=0):
         self.id = id if id is not None else uuid.uuid4().int
         self.type = type
