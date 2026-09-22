@@ -1,6 +1,7 @@
 import uuid
 from .item import Item
-CONDITIONS = ["very not mint condition", "visibly used", "slightly used", "mint", "as new"]
+
+TYPES = ["Kitchen Appliance", "Game Console", "Health Tracker"]
 
 class Electronics(Item): 
     def __init__(self, id=None, type="Unknown", condition=0):
@@ -14,8 +15,4 @@ class Electronics(Item):
     def __str__(self):
         return  f"An object of type Electronics with id {self.id}. "\
                 f"This is a {self.type} device."
-
-    def condition_description(self):
-        index = round(self.condition) - 1
-        return CONDITIONS[index]
     
