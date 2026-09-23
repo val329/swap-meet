@@ -57,4 +57,3 @@ class Vendor:
         other_vendor.add(my_first_item)
 
         return True
-
