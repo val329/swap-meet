@@ -160,11 +160,7 @@ def test_swap_best_by_category_reordered():
         their_priority="Decor"
     )
 
-<<<<<<< HEAD
     # raise Exception("Complete this test according to comments below.")
-=======
-    #raise Exception("Complete this test according to comments below.")
->>>>>>> 60dd90b957a4eea2e774ea9548583207e321de4e
     # *********************************************************************
     # ****** Complete Assert Portion of this test **********
     # *********************************************************************
@@ -174,22 +170,6 @@ def test_swap_best_by_category_reordered():
     # - That all the correct items are in tai and jesse's inventories, 
     # and that the items that were swapped are not there
     
-<<<<<<< HEAD
-    assert result
-    assert len(tai.inventory) == 3
-    assert len(jesse.inventory) == 3
-    assert item_a in jesse.inventory
-    assert item_b in jesse.inventory
-    assert item_f in jesse.inventory
-    assert item_d in tai.inventory
-    assert item_e in tai.inventory
-    assert item_c in tai.inventory
-    assert item_a not in tai.inventory
-    assert item_d not in jesse.inventory
-    
-
-
-=======
     #Assert
 
     assert result
@@ -197,14 +177,16 @@ def test_swap_best_by_category_reordered():
     assert len(tai.inventory) == 3
     assert len(jesse.inventory) == 3
 
-    assert item_f in tai.inventory
+    assert item_d in tai.inventory
     assert item_b in tai.inventory
-    assert item_a in tai.inventory
+    assert item_c in tai.inventory
 
-    assert item_c in jesse.inventory
+    assert item_a in jesse.inventory
     assert item_e in jesse.inventory
-    assert item_d in jesse.inventory
->>>>>>> 60dd90b957a4eea2e774ea9548583207e321de4e
+    assert item_f in jesse.inventory
+
+    assert item_a not in tai.inventory
+    assert item_d not in jesse.inventory
 
 #@pytest.mark.skip
 def test_swap_best_by_category_no_inventory_is_false():
