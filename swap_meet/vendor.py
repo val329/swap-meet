@@ -46,6 +46,7 @@ class Vendor:
 
         if not other_vendor.inventory:
             return False
+        
         my_first_item = self.inventory[0]
         their_first_item = other_vendor.inventory[0]
 
