@@ -67,3 +67,28 @@ class Vendor:
                 matching_items.append(item)
 
         return matching_items
+
+
+    def swap_best_by_category(self, other_vendor, my_priority, their_priority):
+
+        my_item = self.inventory[0]
+        their_item = other_vendor.inventory[0]
+
+        for item in self.inventory: 
+            if item.get_category() == their_priority: 
+                my_item = item
+        
+        for item in other_vendor.inventory: 
+            if item.get_category() == my_priority: 
+                their_item = item
+
+        if not my_item or not their_item: 
+            return False
+        
+        self.swap_items(other_vendor, my_item, their_item)
+        return True
+
+        
+
+            
+
