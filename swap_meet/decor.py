@@ -1,13 +1,11 @@
-import uuid
 from .item import Item
 
 class Decor(Item): 
-    def __init__(self, id=None, width=0, length=0, condition=0):
-        self.id = id if id is not None else uuid.uuid4().int
+    def __init__(self, width=0, length=0, **kwargs):
+        super().__init__(**kwargs) 
         self.width = width
         self.length = length
-        self.condition = condition
-
+        
     def get_category(self):
         return "Decor"
 

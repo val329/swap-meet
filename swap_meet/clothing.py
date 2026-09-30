@@ -1,13 +1,11 @@
-import uuid
 from .item import Item
 
 FABRICS = ["Striped", "Cotton", "Floral"]
 
 class Clothing(Item):
-    def __init__(self, id=None, fabric="Unknown", condition=0):
-        self.id = id if id is not None else uuid.uuid4().int
+    def __init__(self, fabric="Unknown", **kwargs):
+        super().__init__(**kwargs) 
         self.fabric = fabric
-        self.condition = condition
 
     def get_category(self):
         return "Clothing"
