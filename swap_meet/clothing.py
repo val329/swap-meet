@@ -1,7 +1,5 @@
 from .item import Item
 
-FABRICS = ["Striped", "Cotton", "Floral"]
-
 class Clothing(Item):
     def __init__(self, fabric="Unknown", **kwargs):
         super().__init__(**kwargs) 

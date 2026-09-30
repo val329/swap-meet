@@ -1,7 +1,5 @@
 from .item import Item
 
-TYPES = ["Kitchen Appliance", "Game Console", "Health Tracker"]
-
 class Electronics(Item): 
     def __init__(self, type="Unknown", **kwargs):
         super().__init__(**kwargs) 
