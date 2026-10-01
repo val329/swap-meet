@@ -1,6 +1,12 @@
 import uuid
 
-CONDITIONS = ["very not mint condition", "visibly used", "slightly used", "mint", "as new"]
+CONDITIONS = {
+    0: "very not mint condition",
+    1: "visibly used",
+    2: "slightly used",
+    3: "mint",
+    4: "as new"
+}
 
 class Item:
     def __init__(self, id=None, condition=0.0, age=None):
@@ -16,4 +22,4 @@ class Item:
         return CONDITIONS[index]
 
     def __str__(self):
-        return f"An object of type {self.__class__.__name__} with id {self.id}."
+        return f"An object of type {self.get_category()} with id {self.id}."
