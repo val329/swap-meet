@@ -86,21 +86,11 @@ class Vendor:
 
         if not self.inventory or not other_vendor.inventory: 
             return False
-        
-        my_item = None
-        their_item = None
 
-        for item in self.inventory: 
-            if item.get_category() == their_priority: 
-                my_item = item
-        
-        for item in other_vendor.inventory: 
-            if item.get_category() == my_priority: 
-                their_item = item
+        my_best_item = self.get_best_by_category(their_priority)
+        their_best_item = other_vendor.get_best_by_category(my_priority)
 
-        if not my_item or not their_item: 
-            return False
-        
-        self.swap_items(other_vendor, my_item, their_item)
-        return True 
-
+        if my_best_item and their_best_item: 
+            self.swap_items(other_vendor, my_best_item, their_best_item)
+            return True
+        return False
