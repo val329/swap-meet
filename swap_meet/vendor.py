@@ -47,13 +47,7 @@ class Vendor:
 
 # Added for Wave 6 to return all items that match a category
     def get_by_category(self, category):
-        matching_items = []
-
-        for item in self.inventory:
-            if item.get_category() == category:
-                matching_items.append(item)
-
-        return matching_items
+        return [item for item in self.inventory if item.get_category() == category]
 
     def get_best_by_category(self, category):
         matching_items = self.get_by_category(category)
