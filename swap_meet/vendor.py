@@ -21,7 +21,7 @@ class Vendor:
 
         return None
 
-#Wave3 logic for self and other_vendor to swap items
+# Wave3 logic for self and other_vendor to swap items
     def swap_items(self, other_vendor, my_item, their_item):
         if my_item not in self.inventory:
             return False
@@ -36,7 +36,7 @@ class Vendor:
         other_vendor.add(my_item)
         return True
 
-#wave4 logic to swap the first item between self and other_vendor
+# Wave4 logic to swap the first item between self and other_vendor
     def swap_first_item(self, other_vendor):
 
         if not self.inventory:
