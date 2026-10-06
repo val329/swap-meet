@@ -36,10 +36,7 @@ class Vendor:
 # Wave4 logic to swap the first item between self and other_vendor
     def swap_first_item(self, other_vendor):
 
-        if not self.inventory:
-            return False
-
-        if not other_vendor.inventory:
+        if not self.inventory or not other_vendor.inventory:
             return False
         
         my_first_item = self.inventory[0]
