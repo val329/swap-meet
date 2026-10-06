@@ -39,16 +39,11 @@ class Vendor:
         if not self.inventory or not other_vendor.inventory:
             return False
         
-        my_first_item = self.inventory[0]
-        their_first_item = other_vendor.inventory[0]
-
-        self.remove(my_first_item)
-        other_vendor.remove(their_first_item)
-
-        self.add(their_first_item)
-        other_vendor.add(my_first_item)
-
-        return True
+        return self.swap_items(
+            other_vendor,
+            self.inventory[0],
+            other_vendor.inventory[0]
+        )
 
 # Added for Wave 6 to return all items that match a category
     def get_by_category(self, category):
