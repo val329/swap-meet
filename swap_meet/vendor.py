@@ -23,10 +23,7 @@ class Vendor:
 
 # Wave3 logic for self and other_vendor to swap items
     def swap_items(self, other_vendor, my_item, their_item):
-        if my_item not in self.inventory:
-            return False
-
-        if their_item not in other_vendor. inventory:
+        if my_item not in self.inventory or their_item not in other_vendor.inventory:
             return False
         
         self.remove(my_item)
